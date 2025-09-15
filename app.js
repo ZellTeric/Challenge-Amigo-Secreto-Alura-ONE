@@ -19,6 +19,10 @@ function actualizarLista(){
 }
 
 function sortearAmigo(){
+    if(amigos.length == 0){
+        alert("lista vacia, inserte nombres");
+        return;
+    }
     getElemetByClass("result-list").innerHTML = amigos[Math.floor((Math.random() * amigos.length))];
 }
 
