@@ -12,7 +12,10 @@ function agregarAmigo(){
 }
 
 function actualizarLista(){
-    getElemetByClass("name-list").innerHTML += `<ul>${amigos[amigos.length - 1]}</ul>`;
+    getElemetByClass("name-list").innerHTML = "";
+    for (let i = 0; i < amigos.length; i++){
+        getElemetByClass("name-list").innerHTML += `<ul>${amigos[i]}</ul>`;
+    }
 }
 
 function sortearAmigo(){
